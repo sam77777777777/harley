@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="top-menu">
+        <div class="nav-button active">Home</div>
+        <div class="nav-button">Log</div>
+    
+        </div>
+        <p id="last-entry-title">Last meal:</p>
+        <div id="log-section">
+             
+            <div id="hunger-level">
+                <p style="direction: ltr;">Happiness:</p>
+                <div id="hunger-percent"></div>
+
+            </div>
+             
+            <!-- <div id="last-entry">
+                <div class="date-time-container">
+                <div id="entry-time"><span id="time-style">4:15</span>pm</div>
+                <div id="entry-date">DEC 15</div>
+            </div>
+            </div>
+
+            <div id="last-entries">
+                <div class="date-time-container">
+                <div id="entry-time">
+                    <span id="time-style"></span>
+                </div>
+                <div id="entry-date">DEC 15</div>
+            </div>
+            </div>
+
+            <div id="last-entries">
+                <div class="date-time-container">
+                <div id="entry-time"><span id="time-style"></span></div>
+                <div id="entry-date">DEC 15</div>
+            </div>
+            </div> -->
+            
+        </div>
+       
+    </div>
+    <div id="feed-button-container">
+        <div class="indicator-line food"><div id="food-bar" class="indicator-bar food"></div></div>
+        <div class="indicator-line water"><div id="water-bar" class="indicator-bar water"></div></div>
+        <div class="indicator-line outside"><div id="outside-bar" class="indicator-bar outside"></div></div>
+        <div class="indicator-line groomed"><div id="groom-bar" class="indicator-bar groomed"></div></div>
+
+
+        <div id="todays-records-container">
+            <div id="today-title">Today</div>
+            <div id="todays-date"></div>
+            <div class="todays-entries-dots food"></div>
+            <div class="todays-entries-dots water"></div>
+            <div class="todays-entries-dots outside"></div>
+            <div class="todays-entries-dots groomed"></div>
+        </div>
+
+
+
+
+        <button id="food-button" class="record-entry-button food">Food</button>
+        <button id="water-button" class="record-entry-button water">Water</button>
+        <button id="outside-button" class="record-entry-button outside">Outside</button>
+        <button id="groom-button" class="record-entry-button groom">Groom</button>
+    </div>
+
+    <script src="./dist/bundle.js"></script>
+</body>
+</html>
