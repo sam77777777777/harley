@@ -1,0 +1,401 @@
+:root {
+
+    height: 100%;
+    overflow: hidden;
+
+    /* @media only screen and (orientation: landscape) {
+        body {
+            display: none;
+        }
+
+
+      } */
+      
+
+    --primaryColor: #F9F6EE;
+    --secondaryColor:#000;
+    --foodColor: #60404C;
+    --waterColor: #4DCBE8;
+    --outsideColor: #FFE45F;
+    --groomedColor: #FFBF8F;
+
+
+
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primaryColor);
+
+
+}
+
+
+#top-menu {
+    display: flex;
+    padding-top: 5vh;
+    padding-left: 5vw;
+
+}
+
+.nav-button {
+    color: var(--secondaryColor);;
+    padding: 10px 25px 10px 25px;
+    margin-right: 15px;
+    background-color: var(--primaryColor);
+    border-radius: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--secondaryColor);;
+}
+
+.nav-button.active {
+    color: var(--primaryColor);
+    background-color:var(--secondaryColor);;
+    border-color: var(--secondaryColor);;
+}
+
+#last-entry-title {
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+
+#log-section {
+    display: flex; 
+    padding-top: 1vh;
+    padding-left: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    direction: rtl; 
+    margin-top: 0px;
+    margin-bottom: 2vh;
+}
+
+
+#log-section::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+.last-entry {
+    display: flex;
+    text-align: left;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-width: 0px;
+    border-style: solid;
+    border-color: var(--secondaryColor);;
+    border-radius: 20px;
+    margin-right: 5vw;
+    margin-left: 0vw;
+    width: 40vw;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: left;
+}
+
+.date-time-container {
+    direction: ltr;
+}
+
+
+#entry-time {
+    font-size: 25px;
+    
+}
+
+.time-style {
+    font-size: 50px;
+   line-height: 1;
+}
+
+#entry-date {
+    font-size: 50px;
+    line-height: 1;
+}
+
+
+#hunger-level {
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    border-color: var(--secondaryColor);;
+    
+    text-align: center;
+    padding: 10px 5vw 0px 5vw;
+    margin-right: 10vw;
+    margin-left: 0vw;
+    width: 25vw;
+    flex-shrink: 0;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+
+#hunger-percent {
+    
+    font-size: 40px;
+}
+
+
+
+
+
+#feed-button-container {
+    position: absolute;
+    overflow: hidden;
+    background-color: #000000;
+    min-height: 60vh;
+    min-width: 100vw;
+    bottom: 0px;
+    border-radius: 40px 40px 0px 0px;
+}
+
+
+
+
+.indicator-line {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    min-height: 60vh;
+    min-width: 1vw;
+    bottom: 0px;
+}
+
+.indicator-line.food {
+    background-color: var(--foodColor);
+    margin-left: 8vw;
+}
+
+.indicator-line.water {
+    background-color: var(--waterColor);
+    margin-left: 16.3vw;
+}
+
+.indicator-line.outside {
+    background-color: var(--outsideColor);
+    margin-left: 24.6vw;
+}
+
+.indicator-line.groomed {
+    background-color: var(--groomedColor);
+    margin-left: 32.9vw;
+}
+
+
+
+
+.indicator-bar {
+    position: absolute;
+    border-radius: 100px 100px 0px 0px;
+    min-width: 6.5vw;
+    bottom: 0px;
+    transition: 0.5s cubic-bezier(0.15, 0.82, 0.165, 1);
+   
+}
+
+.indicator-bar.food {
+    background-color: var(--foodColor);
+    min-height: 0vh;
+ 
+}
+
+.indicator-bar.water {
+    background-color: var(--waterColor);
+    min-height: 0vh;
+}
+
+.indicator-bar.outside {
+    background-color: var(--outsideColor);
+    min-height: 0vh;
+}
+
+.indicator-bar.groomed {
+    background-color: var(--groomedColor);
+    min-height: 0vh;
+}
+
+
+
+
+.record-entry-button {
+    position: absolute;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.3em;
+    border-style: none;
+    border-radius: 100px;
+    margin-left: 45%;
+    min-width: 45vw;
+    min-height: 40px;
+    bottom: 0px;
+}
+
+.record-entry-button:hover {
+    color: #000;
+}
+
+
+.record-entry-button.food {
+    background-color: var(--foodColor);
+    margin-bottom: 28vh;
+}
+
+.record-entry-button.water {
+    background-color: var(--waterColor);
+    margin-bottom: 21vh;
+}
+
+.record-entry-button.outside {
+    background-color: var(--outsideColor);
+    margin-bottom: 14vh;
+}
+
+.record-entry-button.groom {
+    background-color: var(--groomedColor);
+    margin-bottom: 7vh;
+}
+
+
+#todays-records-container {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    background-color: transparent;
+    min-height: 25vh;
+    min-width: 45vw;
+    margin-left: 45%;
+    margin-bottom: 35vh;
+    bottom: 0px;
+}
+
+
+#today-title {
+    margin-top: 4vh;
+    background-color: transparent;
+    font-size: 3em;
+    color: var(--primaryColor);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#todays-date {
+    position: absolute;
+    margin-top: 12vh;
+    background-color: transparent;
+    font-size: 1em;
+    color: var(--primaryColor);
+
+}
+
+
+.todays-entries-dots {
+    display: flex;
+    position: absolute;
+    border-style: solid;
+    border-color: var(--primaryColor);
+    border-width: 0.13em;
+    border-radius: 100px;
+    margin-bottom: 6vh;
+    min-width: 1em;
+    min-height: 1em;
+    bottom: 0px;
+}
+
+.todays-entries-dots.food {
+    margin-left: 0vw;
+    background-color: var(--foodColor);
+}
+
+.todays-entries-dots.water {
+    margin-left: 6vw;
+    background-color: var(--waterColor);
+}
+
+.todays-entries-dots.outside {
+    margin-left: 12vw;
+    background-color: var(--outsideColor);
+}
+
+.todays-entries-dots.groomed {
+    margin-left: 18vw;
+    background-color: var(--groomedColor);
+}
+
+
+
+
+/* .indicator-line {
+    position: absolute;
+    text-align: center;
+    background-color: #460d1f;
+    min-height: 60vh;
+    min-width: 1vw;
+    bottom: 0px;
+}
+
+.indicator-line.food {
+    background-color: #460d1f;
+    margin-left: 8vw;
+}
+
+.indicator-line.water {
+    background-color: #1c83e3;
+    margin-left: 17vw;
+}
+
+.indicator-line.outside {
+    background-color: #f0ca1d;
+    margin-left: 26vw;
+}
+
+.indicator-line.groomed {
+    background-color: #ff83da;
+    margin-left: 35vw;
+}
+
+
+
+
+.indicator-bar {
+    position: absolute;
+    background-color: #460d1f;
+    border-radius: 100px 100px 0px 0px;
+    min-width: 6vw;
+    bottom: 0px;
+}
+
+.indicator-bar.food {
+    background-color: #460d1f;
+    min-height: 30vh;
+ 
+}
+
+.indicator-bar.water {
+    background-color: #1c83e3;
+    min-height: 40vh;
+    margin-left: 14.25vw;
+}
+
+.indicator-bar.outside {
+    background-color: #f0ca1d;
+    min-height: 25vh;
+    margin-left: 23.25vw;
+}
+
+.indicator-bar.groomed {
+    background-color: #ff83da;
+    min-height: 10vh;
+    margin-left: 32.5vw;
+} */
