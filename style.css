@@ -3,13 +3,13 @@
     height: 100%;
     overflow: hidden;
 
-    /* @media only screen and (orientation: landscape) {
+    @media only screen and (orientation: landscape) {
         body {
             display: none;
         }
 
 
-      } */
+      }
       
 
     --primaryColor: #F9F6EE;
